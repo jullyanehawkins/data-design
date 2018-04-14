@@ -32,44 +32,29 @@
 			</div>
 			<h3>Entities &amp; Attributes</h3>
 			<ul>
-				<li>profile (Jully must login to her account in order to rate the movies)
-					<ul>
-						<li>Attributes of the profile entity:
-							<ul>
-								<li>profileId (primary key)</li>
-								<li>profileName</li>
-								<li>profileEmail (unique information)</li>
-								<li>profileActivationToken</li>
-								<li>profileAtHandle (unique information)</li>
-								<li>profileHash</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li>movie (the content that Jully wants to rate)
-					<ul>
-						<li>Attributes of the movie entity:
-							<ul>
-								<li>movieId (unique information and primary key)</li>
-								<li>movieName</li>
-								<li>movieDirector</li>
-								<li>movieGenre</li>
-								<li>movieLength</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li>ratings (Jully’s interaction with movies)
-					<ul>
-						<li>Attributes of the rating entity (ratings is a weak/try hard entity):</li>
-						<ul>
-							<li>ratingsId (primary key)</li>
-							<li>ratingProfileId (foreign key)</li>
-							<li>ratingMovieId (foreign key)</li>
-						</ul>
-						</li>
-					</ul>
-				</li>
+				<li>profile (Jully must login to her account in order to rate the movies)</li>
+				<ul>
+					<li>profileId (primary key)</li>
+					<li>profileName</li>
+					<li>profileEmail (unique information)</li>
+					<li>profileActivationToken</li>
+					<li>profileAtHandle (unique information)</li>
+					<li>profileHash</li>
+				</ul>
+				<li>movie (the content that Jully wants to rate)</li>
+				<ul>
+					<li>movieId (unique information and primary key)</li>
+					<li>movieName</li>
+					<li>movieDirector</li>
+					<li>movieGenre</li>
+					<li>movieLength</li>
+				</ul>
+				<li>ratings (Jully’s interaction with movies)</li>
+				<ul>
+					<li>ratingsId (primary key)</li>
+					<li>ratingProfileId (foreign key)</li>
+					<li>ratingMovieId (foreign key)</li>
+				</ul>
 			</ul>
 				<br>
 				<h2>Entity Relationship Diagram (ERD)</h2>
