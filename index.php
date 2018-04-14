@@ -28,7 +28,7 @@
 			</ul>
 			<div>
 				<h2>Conceptual Model</h2>
-				<p>Numerous users can rate various movies multiple times (m-to-n)</p>
+				<p>Numerous profiles can rate various movies multiple times (m-to-n)</p>
 			</div>
 			<h3>Entities &amp; Attributes</h3>
 			<ul>
