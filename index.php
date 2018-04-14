@@ -26,6 +26,53 @@
 				<li>Jully clicks on the star button to rate the movie</li>
 				<li>Site saves her rating and show it to her</li>
 			</ul>
+			<div>
+				<h2>Conceptual Model</h2>
+				<p>Numerous users can rate various movies multiple times (m-to-n)</p>
+			</div>
+			<h3>Entities &amp; Attributes</h3>
+			<ul>
+				<li>profile (Jully must login to her account in order to rate the movies)
+					<ul>
+						<li>Attributes of the profile entity:
+							<ul>
+								<li>profileId (primary key)</li>
+								<li>profileName</li>
+								<li>profileEmail (unique information)</li>
+								<li>profileActivationToken</li>
+								<li>profileAtHandle (unique information)</li>
+								<li>profileHash</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>movie (the content that Jully wants to rate)
+					<ul>
+						<li>Attributes of the movie entity:
+							<ul>
+								<li>movieId (unique information and primary key)</li>
+								<li>movieName</li>
+								<li>movieDirector</li>
+								<li>movieGenre</li>
+								<li>movieLength</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>ratings (Jully’s interaction with movies)
+					<ul>
+						<li>Attributes of the rating entity (ratings is a weak/try hard entity):</li>
+						<ul>
+							<li>ratingsId (primary key)</li>
+							<li>ratingProfileId (foreign key)</li>
+							<li>ratingMovieId (foreign key)</li>
+						</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+				<br>
+				<h2>Entity Relationship Diagram (ERD)</h2>
 		<img src = "data%20design%20erd.JPG">
 	</body>
 </html>
