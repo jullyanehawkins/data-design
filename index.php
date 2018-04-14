@@ -7,13 +7,13 @@
 	<body>
 		<h1>Data Design</h1>
 		<div><h2>Persona</h2>
-			<p>Jully is an almost 30 years old woman 👵🏻 who loves movies. Because of her OCD, she enjoys rating the movies that she watched. One way that she finds to do so is by using the website https://filmow.com/ with her MacBook (macOS High Sierra 10.13.4) and on her iPhone X (iOS 11.3). As a Millennial, she is very confident with technology.</p>
+			<p>Jully is an almost 30 years old woman 👵🏻 who loves movies. Because of her OCD, she enjoys rating the movies that she watched. One way that she finds to do so is by using the website  <a href="https://filmow.com/">Filmow</a> on her MacBook (macOS High Sierra 10.13.4) and on her iPhone X (iOS 11.3). As a Millennial, she is very confident with technology.</p>
 		</div>
 		<div>
 			<h2>User Story</h2>
 			<p>As a user, Jully wants to rate movies on Filmow.</p>
 		</div>
-		<img src = "data%20design%20website.JPG">
+		<img src = "data-design-page.JPG">
 		<div>
 			<h2>Use Case/Interaction Flow</h2>
 			<p>Precondition: Jully is logged in her account.</p>
@@ -51,13 +51,12 @@
 				</ul>
 				<li>ratings (Jully’s interaction with movies)</li>
 				<ul>
-					<li>ratingsId (primary key)</li>
 					<li>ratingProfileId (foreign key)</li>
 					<li>ratingMovieId (foreign key)</li>
 				</ul>
 			</ul>
 				<br>
 				<h2>Entity Relationship Diagram (ERD)</h2>
-		<img src = "data%20design%20erd.JPG">
+		<img src = "data-design-erd.SVG">
 	</body>
 </html>
