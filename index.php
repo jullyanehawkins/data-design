@@ -6,8 +6,15 @@
 	</head>
 	<body>
 		<h1>Data Design</h1>
-		<div><h2>Persona</h2>
-			<p>Jully is an almost 30 years old woman 👵🏻 who loves movies. Because of her OCD, she enjoys rating the movies that she watched. One way that she finds to do so is by using the website  <a href="https://filmow.com/">Filmow</a> on her MacBook (macOS High Sierra 10.13.4) and on her iPhone X (iOS 11.3). As a Millennial, she is very confident with technology.</p>
+		<div>
+			<h2>Persona</h2>
+			<p><strong>Name: </strong>Jully</p>
+			<p><strong>Age: </strong>27</p>
+			<p><strong>Profession: </strong>Student</p>
+			<p><strong>Technology: </strong>Uses a MacBook Pro (macOS High Sierra 10.13.4) and an iPhone X (iOS 11.3)</p>
+			<p><strong>Attitudes and Behaviors: </strong>Jully is a full time student that enjoys watching movies on her free time. She is extremely organized and likes keeping everything on track. Including her social medias.</p>
+			<p><strong>Frustrations and Needs: </strong>Jully is tired of “no meaning” social medias and wants to find one where she can share her movie passion.</p>
+			<p><strong>Goals: </strong>Jully wants to keep tracking all the movies that she has watched in case she decides to watch some again or even suggest to a friend what to see or not. She needs a social media that will make that possible.</p>
 		</div>
 		<div>
 			<h2>User Story</h2>
