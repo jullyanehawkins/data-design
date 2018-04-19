@@ -45,7 +45,6 @@
 					<li>profileName</li>
 					<li>profileEmail (unique information)</li>
 					<li>profileActivationToken</li>
-					<li>profileAtHandle (unique information)</li>
 					<li>profileHash</li>
 				</ul>
 				<li>movie (the content that Jully wants to rate)</li>
