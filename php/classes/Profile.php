@@ -10,22 +10,22 @@
 
 class Profile {
 	/**
-	 * id for this profile: this is the primary key
+	 * id for this profile: this is the primary key and it's an unique index
 	 * @var Uuid $profileId //I need to learn what this means, writing it here based on the example
 	 **/
 	private $profileId;
 	/** token handed out to verify that account is not malicious
-	* @var string $profileActivationToken //?
+	* @var Uuid $profileActivationToken //?
 	**/
 	private $profileActivationToken;
 	/**
 	 * email associated with this profile; this is a unique index
-	 * @var string $profileEmail //?
+	 * @var Uuid $profileEmail //?
 	 **/
 	private $profileEmail;
 	/**
 	 * hash for profile password
-	 * @var string $profileHash //?
+	 * @var mixed $profileHash //?
 	 **/
 	private $profileHash;
 	/**
@@ -38,7 +38,7 @@ class Profile {
 	 *
 	 * @return Uuid value for profileId (or null if new profile)
 	 **/
-	public function getProfileId() {
+	public function getProfileId(): Uuid {
 		return $this->profileId;
 	}
 	/**
@@ -48,7 +48,7 @@ class Profile {
 	 * @throws \RangeException if $newProfileId is not positive
 	 * @throws \TypeError id profile id is not positive
 	 **/
-	public function setProfileId($profileId): void {
+	public function setProfileId(Uuid $profileId): void {
 		$this->profileId = $profileId;
 	}
 	/**
@@ -56,7 +56,7 @@ class Profile {
 	*
 	* @return string value of the activation token
 	**/
-	public function getProfileActivationToken() {
+	public function getProfileActivationToken(): Uuid {
 		return $this->profileActivationToken;
 	}
 	/**
@@ -67,7 +67,7 @@ class Profile {
 	 * @throws \RangeException if the token is not exactly 32 characters
 	 * @throws \TypeError if the activation token is not a string
 	 **/
-	public function setProfileActivationToken($profileActivationToken): void {
+	public function setProfileActivationToken(Uuid $profileActivationToken): void {
 		$this->profileActivationToken = $profileActivationToken;
 	}
 	/**
@@ -75,7 +75,7 @@ class Profile {
 	 *
 	 * @return string value of profile email
 	 **/
-	public function getProfileEmail() {
+	public function getProfileEmail(): Uuid {
 		return $this->profileEmail;
 	}
 	/**
@@ -86,8 +86,8 @@ class Profile {
 	 * @throws \RangeException if $newProfileEmail is > 128 characters
 	 * @throws \TypeError if $newProfileEmail is not a string
 	 **/
-	public function setProfileEmail($profileEmail): void {
-		$this->profileEmail = $profileEmail;
+	public function setProfileEmail(Uuid $newProfileEmail): void {
+		$this->profileEmail = $newProfileEmail;
 	}
 	/**
 	 * accessor method for profileHash
@@ -127,5 +127,4 @@ class Profile {
 	public function setProfileName($profileName): void {
 		$this->profileName = $profileName;
 	}
-
 }

@@ -10,6 +10,8 @@ CREATE TABLE profile (
 	profileEmail VARCHAR(128) NOT NULL,
 	profileHash	CHAR(128) NOT NULL,
 	profileName VARCHAR(32),
+	UNIQUE (profileId),
+	UNIQUE (profileActivationToken),
 	UNIQUE(profileEmail),
 	PRIMARY KEY(profileId)
 );

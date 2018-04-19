@@ -41,10 +41,10 @@
 			<ul>
 				<li>profile (Jully must login to her account in order to rate the movies)</li>
 				<ul>
-					<li>profileId (primary key)</li>
+					<li>profileId (unique information and primary key)</li>
 					<li>profileName</li>
 					<li>profileEmail (unique information)</li>
-					<li>profileActivationToken</li>
+					<li>profileActivationToken (unique information)</li>
 					<li>profileHash</li>
 				</ul>
 				<li>movie (the content that Jully wants to rate)</li>
