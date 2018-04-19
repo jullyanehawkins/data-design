@@ -1,17 +1,15 @@
 ALTER DATABASE jhawkins20 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-DROP TABLE IF EXISTS `ratings`;
+DROP TABLE IF EXISTS ratings;
 DROP TABLE IF EXISTS movie;
 DROP TABLE IF EXISTS profile;
 
 CREATE TABLE profile (
 	profileId BINARY(16) NOT NULL,
 	profileActivationToken CHAR(32),
-	profileAtHandle VARCHAR(32) NOT NULL,
 	profileEmail VARCHAR(128) NOT NULL,
 	profileHash	CHAR(128) NOT NULL,
 	profileName VARCHAR(32),
-	UNIQUE(profileAtHandle),
 	UNIQUE(profileEmail),
 	PRIMARY KEY(profileId)
 );
@@ -26,7 +24,7 @@ CREATE TABLE movie (
 	PRIMARY KEY(movieId)
 );
 
-CREATE TABLE `ratings` (
+CREATE TABLE ratings (
 	ratingsProfileId BINARY(16) NOT NULL,
 	ratingsMovieId BINARY(16) NOT NULL,
 	INDEX(ratingsProfileId),
