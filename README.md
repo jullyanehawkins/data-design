@@ -1,2 +1,2 @@
 # data-design
-Practice of mapping entities, attributes and relations
+First Deep Dive Coding bootcamp project to practice mySQL and Object Oriented Programming in PHP. I chose https://filmow.com/ as my example.
