@@ -3,7 +3,7 @@ VALUES(UNHEX(REPLACE("f6d46fac-c4a0-49c6-bc70-fb0fbeeacb6b", "-", "")), "012345"
 
 UPDATE profile
 SET profileName = "Jullyane"
-WHERE profileName = "jully;"
+WHERE profileName = "jully";
 
 DELETE FROM profile
 WHERE profileEmail = "jullyanejgf@gmail.com";
@@ -16,4 +16,4 @@ SET movieGenre = "Crime"
 WHERE movieGenre = "Thriller";
 
 DELETE FROM movie
-WHERE movieId = UNHEX(REPLACE("690319b4-1111-48f1-a3c8-0003198c94db", "-", "");
+WHERE movieId = UNHEX("f6d46facc4a049c6bc70fb0fbeeacb6b");
