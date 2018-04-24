@@ -57,12 +57,13 @@
 				</ul>
 				<li>ratings (Julie’s interaction with movies)</li>
 				<ul>
-					<li>ratingProfileId (foreign key)</li>
-					<li>ratingMovieId (foreign key)</li>
+					<li>ratingsProfileId (foreign key)</li>
+					<li>ratingsMovieId (foreign key)</li>
+					<li>ratingsDate</li>
 				</ul>
 			</ul>
 				<br>
 				<h2>Entity Relationship Diagram (ERD)</h2>
-		<img src = "data-design-erd.SVG">
+		<img src = "images/data-design-erd.SVG">
 	</body>
 </html>
