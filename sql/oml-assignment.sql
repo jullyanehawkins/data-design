@@ -16,4 +16,6 @@ SET movieGenre = "Crime"
 WHERE movieGenre = "Thriller";
 
 DELETE FROM movie
-WHERE movieId = UNHEX("f6d46facc4a049c6bc70fb0fbeeacb6b");
+WHERE movieId = "f6d46fac-c4a0-49c6-bc70-fb0fbeeacb6b";
+
+SELECT * FROM ratings;

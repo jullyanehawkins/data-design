@@ -8,7 +8,8 @@
  * @version 1.0.0
  **/
 
-class Profile {
+class Profile implements \JsonSerializable {
+	use \Edu\Cnm\DataDesign\ValidateUuid;
 	/**
 	 * id for this profile: this is the primary key and it's an unique index
 	 * @var Uuid $profileId
