@@ -315,6 +315,49 @@ public static function getProfileByProfileId(\PDO $pdo, $profileId) : ?Profile {
 	return($profile);
 }
 /**
+ * gets the profile by ProfileEmail
+ *
+ * @param \PDO $pdo PDO connection object
+ * @param Uuid|string $profileId profile id to search for
+ *
+ * @return Profile|null profile found or null if not found
+ *
+ * @throws \PDOException when mySQL related error occur
+ * @throws \TypeError when a variable are not the correct data type
+ **/
+public static function getProfileByProfileEmail(\PDO $pdo, $profileId) : ?Profile {
+	// sanitize the profileId before searching
+	try {
+		$profileEmail = self::validateUuid($profileEmail);
+	}
+	catch (\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception)
+	{
+		throw(new \PDOException($exception->getMessage(), 0, $exception));
+	}
+	//create query template
+	$query = "SELECT profileId, profileActivationToken, profileEmail, profileName FROM profile WHERE profileEmail = :profileEmail";
+	$statement = $pdo->prepare($query);
+	//bind the profile id to the placeholder in the template
+	$parameters = ["profileEmail" => $profileEmail->getBytes()];
+	$statement->execute($parameters);
+	//grab the profile from mySQL
+	try {
+		$profile = null;
+		//give results in the "associative array" format; grabs results one row at a time and returns false when done.
+		$statement->setFetchMode(\PDO::FETCH_ASSOC);
+		$row = $statement->fetch();
+		if ($row !== false) {
+			$profileEmail = new ProfileEmail ($row["profileId"], $row["profileActivationToken"], $row["profileEmail"], $row["profileName"]);
+		}
+	}
+		//a fail safe to catch any further issues
+	catch(\Exception $exception) {
+		//if the row couldn't be converted, re-throw it
+		throw(new \PDOException($exception->getMessage(), 0, $exception));
+	}
+	return($profileEmail);
+}
+/**
  * gets all profiles
  *
  * @param \PDO $pdo PDO connection object
