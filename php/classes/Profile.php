@@ -10,7 +10,7 @@ use Ramsey\Uuid\Uuid;
  * This is a cross section of what is stored in the database of a profile on filmow.com.
  *
  * @author Jullyane Hawkins <jhawkins20@cnm.edu>
- * @version 2.0.0
+ * @version 4.0.0
  **/
 class Profile implements \JsonSerializable {
 	use \Edu\Cnm\DataDesign\ValidateUuid;
