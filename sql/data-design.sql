@@ -21,7 +21,7 @@ CREATE TABLE movie (
 	movieName VARCHAR(32),
 	movieDirector VARCHAR(32),
 	movieGenre VARCHAR(32),
-	movieLength TINYINT(1),
+	movieLength BINARY(16),
 	UNIQUE(movieId),
 	PRIMARY KEY(movieId)
 );
