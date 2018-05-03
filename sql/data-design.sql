@@ -36,3 +36,7 @@ CREATE TABLE ratings (
 	FOREIGN KEY(ratingsMovieId) REFERENCES movie(movieId),
 	PRIMARY KEY(ratingsProfileId, ratingsMovieId)
 );
+
+DROP TABLE ratings;
+DROP TABLE movie;
+DROP TABLE profile;
